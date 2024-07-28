@@ -20,4 +20,4 @@ Install [the script](https://github.com/pawllo01/deezer-more-albums/raw/master/d
 
 If you're using Tampermonkey, make sure to enable Developer Mode. - [tutorial](https://www.tampermonkey.net/faq.php?locale=en#Q209)
 
-https://github.com/user-attachments/assets/bde9f838-2714-40be-a99f-2f4c872df733
+https://github.com/user-attachments/assets/323199bf-e93d-4899-b1ee-aa0a89313fbb
