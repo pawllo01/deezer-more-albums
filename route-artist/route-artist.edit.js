@@ -1914,6 +1914,7 @@
           v,
           v2,
           f,
+          f2,
           b,
           g,
           I = e.artistId,
@@ -1984,16 +1985,16 @@
                 ae.push([Q, (0, h.AP)("discographytype_title_compilations_web")]),
                 (te = function () {
                   var e;
-                  z({ variables: { cursor: null == F || null === (e = F.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
+                  z({ variables: { cursor: null == U || null === (e = U.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
                 }),
                 !1 === (null == U || null === (f = U.artist) || void 0 === f ? void 0 : f.albums.pageInfo.hasNextPage) &&
                   ((ee = null == U2 || null === (v2 = U2.artist) || void 0 === v2 ? void 0 : v2.albums.pageInfo.hasNextPage),
                   ae.push([Q2, (0, h.AP)("More albums")]),
                   (te = function () {
                     var e;
-                    z2({ variables: { cursor: null == F || null === (e = F.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
+                    z2({ variables: { cursor: null == U2 || null === (e = U2.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
                   }),
-                  !1 === (null == U || null === (f = U.artist) || void 0 === f ? void 0 : f.albums.pageInfo.hasNextPage) &&
+                  !1 === (null == U2 || null === (f2 = U2.artist) || void 0 === f2 ? void 0 : f2.albums.pageInfo.hasNextPage) &&
                     ((ee = null == K || null === (b = K.artist) || void 0 === b ? void 0 : b.albums.pageInfo.hasNextPage),
                     ae.push([$, (0, h.AP)("discography_title_featuredin_web")]),
                     (te = function () {
