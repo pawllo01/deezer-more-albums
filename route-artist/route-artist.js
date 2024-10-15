@@ -2050,6 +2050,7 @@
           a,
           r,
           i,
+          i2,
           l,
           s,
           u,
@@ -2060,7 +2061,9 @@
           E,
           y,
           v,
+          v2,
           f,
+          f2,
           h,
           g,
           I = e.artistId,
@@ -2087,7 +2090,10 @@
           Z = (0, Pe.JDV)({ variables: $t($t({}, k), {}, { types: [Pe.iqi.ALBUM], subType: Pe.Mij.COMPILATION }) }),
           q = Z.data,
           V = Z.fetchMore,
-          X = (0, Pe.JDV)({ variables: $t($t({}, k), {}, { roles: [Pe.by3.FEATURED], types: [Pe.iqi.ALBUM, Pe.iqi.EP, Pe.iqi.SINGLES], mode: Pe.rb0.ALL }) }),
+          Z2 = (0, Pe.JDV)({ variables: $t($t({}, k), {}, { roles: [Pe.by3.MAIN], types: [Pe.iqi.ALBUM, Pe.iqi.EP, Pe.iqi.SINGLES], mode: Pe.rb0.NON_OFFICIAL }) }),
+          q2 = Z2.data,
+          V2 = Z2.fetchMore,
+          X = (0, Pe.JDV)({ variables: $t($t({}, k), {}, { roles: [Pe.by3.FEATURED], types: [Pe.iqi.ALBUM, Pe.iqi.EP, Pe.iqi.SINGLES], mode: Pe.rb0.OFFICIAL }) }),
           J = X.data,
           W = X.fetchMore,
           Q = en(null == w || null === (t = w.artist) || void 0 === t ? void 0 : t.albums.edges),
@@ -2095,6 +2101,7 @@
           ee = en(null == j || null === (a = j.artist) || void 0 === a ? void 0 : a.albums.edges),
           te = en(null == z || null === (r = z.artist) || void 0 === r ? void 0 : r.albums.edges),
           ne = en(null == q || null === (i = q.artist) || void 0 === i ? void 0 : i.albums.edges),
+          ne2 = en(null == q2 || null === (i2 = q2.artist) || void 0 === i2 ? void 0 : i2.albums.edges),
           ae = en(null == J || null === (l = J.artist) || void 0 === l ? void 0 : l.albums.edges),
           re = null == w || null === (s = w.artist) || void 0 === s ? void 0 : s.albums.pageInfo.hasNextPage,
           ie = function () {
@@ -2131,13 +2138,20 @@
                   V({ variables: { cursor: null == q || null === (e = q.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
                 }),
                 !1 === (null == q || null === (f = q.artist) || void 0 === f ? void 0 : f.albums.pageInfo.hasNextPage) &&
-                  ((re = null == J || null === (h = J.artist) || void 0 === h ? void 0 : h.albums.pageInfo.hasNextPage),
-                  le.push([ae, (0, b.AP)("discography_title_featuredin_web"), "artist_featured_discography"]),
+                  ((re = null == q2 || null === (v2 = q2.artist) || void 0 === v2 ? void 0 : v2.albums.pageInfo.hasNextPage),
+                  le.push([ne2, (0, b.AP)("More albums"), "More albums"]),
                   (ie = function () {
                     var e;
-                    W({ variables: { cursor: null == J || null === (e = J.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
+                    V2({ variables: { cursor: null == q2 || null === (e = q2.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
                   }),
-                  !1 === (null == J || null === (g = J.artist) || void 0 === g ? void 0 : g.albums.pageInfo.hasNextPage) && (ie = function () {}))))));
+                  !1 === (null == q2 || null === (f2 = q2.artist) || void 0 === f2 ? void 0 : f2.albums.pageInfo.hasNextPage) &&
+                    ((re = null == J || null === (h = J.artist) || void 0 === h ? void 0 : h.albums.pageInfo.hasNextPage),
+                    le.push([ae, (0, b.AP)("discography_title_featuredin_web"), "artist_featured_discography"]),
+                    (ie = function () {
+                      var e;
+                      W({ variables: { cursor: null == J || null === (e = J.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
+                    }),
+                    !1 === (null == J || null === (g = J.artist) || void 0 === g ? void 0 : g.albums.pageInfo.hasNextPage) && (ie = function () {})))))));
         var oe = !1;
         return c.createElement(
           Kt.A,
