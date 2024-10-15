@@ -2052,6 +2052,7 @@
           i,
           i2,
           l,
+          l2,
           s,
           u,
           d,
@@ -2065,7 +2066,9 @@
           f,
           f2,
           h,
+          h2,
           g,
+          g2,
           I = e.artistId,
           _ = P.A.isAllowed("artist_page_albums_sorted_by_rank") ? Pe.sV3.RANK : Pe.sV3.RELEASE_DATE,
           T = (0, c.useState)(_),
@@ -2096,6 +2099,9 @@
           X = (0, Pe.JDV)({ variables: $t($t({}, k), {}, { roles: [Pe.by3.FEATURED], types: [Pe.iqi.ALBUM, Pe.iqi.EP, Pe.iqi.SINGLES], mode: Pe.rb0.OFFICIAL }) }),
           J = X.data,
           W = X.fetchMore,
+          X2 = (0, Pe.JDV)({ variables: $t($t({}, k), {}, { roles: [Pe.by3.FEATURED], types: [Pe.iqi.ALBUM, Pe.iqi.EP, Pe.iqi.SINGLES, Pe.iqi.SINGLES], mode: Pe.rb0.NON_OFFICIAL }) }),
+          J2 = X2.data,
+          W2 = X2.fetchMore,
           Q = en(null == w || null === (t = w.artist) || void 0 === t ? void 0 : t.albums.edges),
           $ = en(null == F || null === (n = F.artist) || void 0 === n ? void 0 : n.albums.edges),
           ee = en(null == j || null === (a = j.artist) || void 0 === a ? void 0 : a.albums.edges),
@@ -2103,6 +2109,7 @@
           ne = en(null == q || null === (i = q.artist) || void 0 === i ? void 0 : i.albums.edges),
           ne2 = en(null == q2 || null === (i2 = q2.artist) || void 0 === i2 ? void 0 : i2.albums.edges),
           ae = en(null == J || null === (l = J.artist) || void 0 === l ? void 0 : l.albums.edges),
+          ae2 = en(null == J2 || null === (l2 = J2.artist) || void 0 === l2 ? void 0 : l2.albums.edges),
           re = null == w || null === (s = w.artist) || void 0 === s ? void 0 : s.albums.pageInfo.hasNextPage,
           ie = function () {
             var e;
@@ -2146,12 +2153,19 @@
                   }),
                   !1 === (null == q2 || null === (f2 = q2.artist) || void 0 === f2 ? void 0 : f2.albums.pageInfo.hasNextPage) &&
                     ((re = null == J || null === (h = J.artist) || void 0 === h ? void 0 : h.albums.pageInfo.hasNextPage),
-                    le.push([ae, (0, b.AP)("discography_title_featuredin_web"), "artist_featured_discography"]),
+                    le.push([ae, (0, b.AP)("Featured in (official)"), "Featured in (official)"]),
                     (ie = function () {
                       var e;
                       W({ variables: { cursor: null == J || null === (e = J.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
                     }),
-                    !1 === (null == J || null === (g = J.artist) || void 0 === g ? void 0 : g.albums.pageInfo.hasNextPage) && (ie = function () {})))))));
+                    !1 === (null == J || null === (g = J.artist) || void 0 === g ? void 0 : g.albums.pageInfo.hasNextPage) &&
+                      ((re = null == J2 || null === (h2 = J2.artist) || void 0 === h2 ? void 0 : h2.albums.pageInfo.hasNextPage),
+                      le.push([ae2, (0, b.AP)("Featured in (unofficial)"), "Featured in (unofficial)"]),
+                      (ie = function () {
+                        var e;
+                        W2({ variables: { cursor: null == J2 || null === (e = J2.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
+                      }),
+                      !1 === (null == J2 || null === (g2 = J2.artist) || void 0 === g2 ? void 0 : g2.albums.pageInfo.hasNextPage) && (ie = function () {}))))))));
         var oe = !1;
         return c.createElement(
           Kt.A,
