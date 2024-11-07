@@ -6,13 +6,12 @@ The 'More albums' section displays albums, EPs, and singles that are marked as u
 
 https://github.com/user-attachments/assets/b2902e7e-8c02-4e7b-b15e-c306bf2d08b9
 
-### 'More albums' section example
+## What does the script change?
 
-![](images/more-albums-example.png)
-
-### 'Featured in' section example
-
-![](images/featured-in-example.png)
+- Sorts an artist's albums by release date.
+- Displays live, karaoke, and compilation albums in the "Albums" section.
+- Adds a new "More albums" section that includes unofficial (hidden) albums.
+- Adds official and unofficial featured albums.
 
 ## Installing
 
