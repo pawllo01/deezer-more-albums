@@ -1173,16 +1173,16 @@
       const kt = (e) => {
         var t, a, l, n, r, s, o, d;
         let { artistId: m } = e;
-        const u = pe.sV3.RELEASE_DATE,
+        const u = E.A.isAllowed("artist_page_albums_sorted_by_rank") ? pe.sV3.RANK : pe.sV3.RELEASE_DATE,
           [p, A] = (0, i.useState)(u),
           [, y] = (0, i.useTransition)(),
           h = { artistId: m, nb: 30, cursor: null, subType: null, roles: [pe.by3.MAIN], mode: pe.rb0.OFFICIAL, order: p },
-          { data: v, fetchMore: g } = (0, pe.JDV)({ variables: { ...h, types: [pe.iqi.ALBUM] } }),
+          { data: v, fetchMore: g } = (0, pe.JDV)({ variables: { ...h, types: [pe.iqi.ALBUM], subType: pe.Mij.STUDIO } }),
           { data: I, fetchMore: _ } = (0, pe.JDV)({ variables: { ...h, types: [pe.iqi.EP] } }),
           { data: b, fetchMore: T } = (0, pe.JDV)({ variables: { ...h, types: [pe.iqi.SINGLES] } }),
-          { data: P, fetchMore: S } = (0, pe.JDV)({ variables: { ...h, roles: [pe.by3.MAIN], types: [pe.iqi.ALBUM, pe.iqi.EP, pe.iqi.SINGLES], mode: pe.rb0.NON_OFFICIAL } }),
-          { data: L, fetchMore: x } = (0, pe.JDV)({ variables: { ...h, roles: [pe.by3.FEATURED], types: [pe.iqi.ALBUM, pe.iqi.EP, pe.iqi.SINGLES], mode: pe.rb0.OFFICIAL } }),
-          { data: f, fetchMore: C } = (0, pe.JDV)({ variables: { ...h, roles: [pe.by3.FEATURED], types: [pe.iqi.ALBUM, pe.iqi.EP, pe.iqi.SINGLES, pe.iqi.SINGLES], mode: pe.rb0.NON_OFFICIAL } }),
+          { data: P, fetchMore: S } = (0, pe.JDV)({ variables: { ...h, types: [pe.iqi.ALBUM], subType: pe.Mij.LIVE } }),
+          { data: L, fetchMore: x } = (0, pe.JDV)({ variables: { ...h, types: [pe.iqi.ALBUM], subType: pe.Mij.COMPILATION } }),
+          { data: f, fetchMore: C } = (0, pe.JDV)({ variables: { ...h, roles: [pe.by3.FEATURED], types: [pe.iqi.ALBUM, pe.iqi.EP, pe.iqi.SINGLES], mode: pe.rb0.ALL } }),
           N = wt(null == v || null === (t = v.artist) || void 0 === t ? void 0 : t.albums.edges),
           R = wt(null == I || null === (a = I.artist) || void 0 === a ? void 0 : a.albums.edges),
           D = wt(null == b || null === (l = b.artist) || void 0 === l ? void 0 : l.albums.edges),
@@ -1212,21 +1212,21 @@
             }),
             !1 === (null == b || null === (K = b.artist) || void 0 === K ? void 0 : K.albums.pageInfo.hasNextPage) &&
               ((M = null == P || null === (z = P.artist) || void 0 === z ? void 0 : z.albums.pageInfo.hasNextPage),
-              G.push([k, (0, c.AP)("More albums"), "More albums"]),
+              G.push([k, (0, c.AP)("discographytype_title_livealbums_web"), "live_albums"]),
               (F = () => {
                 var e;
                 S({ variables: { cursor: null == P || null === (e = P.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
               }),
               !1 === (null == P || null === (q = P.artist) || void 0 === q ? void 0 : q.albums.pageInfo.hasNextPage) &&
                 ((M = null == L || null === (Z = L.artist) || void 0 === Z ? void 0 : Z.albums.pageInfo.hasNextPage),
-                G.push([O, (0, c.AP)("Featured in (official)"), "Featured in (official)"]),
+                G.push([O, (0, c.AP)("discographytype_title_compilations_web"), "compilations"]),
                 (F = () => {
                   var e;
                   x({ variables: { cursor: null == L || null === (e = L.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
                 }),
                 !1 === (null == L || null === (V = L.artist) || void 0 === V ? void 0 : V.albums.pageInfo.hasNextPage) &&
                   ((M = null == f || null === (X = f.artist) || void 0 === X ? void 0 : X.albums.pageInfo.hasNextPage),
-                  G.push([B, (0, c.AP)("Featured in (unofficial)"), "Featured in (unofficial)"]),
+                  G.push([B, (0, c.AP)("discography_title_featuredin_web"), "artist_featured_discography"]),
                   (F = () => {
                     var e;
                     C({ variables: { cursor: null == f || null === (e = f.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
