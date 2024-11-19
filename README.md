@@ -1,17 +1,13 @@
 # Deezer More Albums
 
-Show the 'More albums' and 'Featured in' sections on the artists' discography pages.
+Some albums on Deezer are not visible on artists' discography pages. This script makes them visible and adds live, karaoke, and compilation albums to the "Albums" section.
 
-The 'More albums' section displays albums, EPs, and singles that are marked as unofficial.
+> [!NOTE]
+> Currently, the Deezer API is very slow and buggy. It may take several seconds to load an artist's discography, especially for those with many releases. Sometimes, the albums may not appear at all. To fix this, wait a few seconds and refresh the page. All albums should load properly. If needed, repeat the process.
 
-https://github.com/user-attachments/assets/b2902e7e-8c02-4e7b-b15e-c306bf2d08b9
+## How It Works: Before and After Using the Script
 
-## What does the script change?
-
-- Sorts an artist's albums by release date.
-- Displays live, karaoke, and compilation albums in the "Albums" section.
-- Adds a new "More albums" section that includes unofficial (hidden) albums.
-- Adds official and unofficial featured albums.
+![](before-after.png)
 
 ## Installing
 
