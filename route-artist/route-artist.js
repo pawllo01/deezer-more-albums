@@ -425,24 +425,6 @@
         return i.createElement("div", { className: (0, l.A)(r.root, o) }, i.createElement("div", { className: (0, l.A)(r.img, r[t]) }), i.createElement("div", { className: r.text }, a));
       };
     },
-    "/G5K": (e, t, a) => {
-      a.d(t, { A: () => m });
-      a("PHi8"), a("N/s9");
-      var i = a("q1tI"),
-        l = a("juqV"),
-        n = a("/MKj"),
-        r = a("xobL"),
-        s = a("x4+n"),
-        o = a("BJtZ");
-      const c = { root: "MaxOe", label: "xogtX", "is-active": "oSYze", isActive: "oSYze", "is-disabled": "nRbxm", isDisabled: "nRbxm", "is-restricted": "K50Uu", isRestricted: "K50Uu" };
-      var d = a("iiSH");
-      const m = (e) => {
-        let { date: t, dataTestId: a } = e;
-        const [m] = (0, n.d4)((e) => [(0, r.mI)({ SERVER_TIMESTAMP: (0, r.mS)(e.user), clientTimestampDelta: (0, r.gE)(e.user) })]),
-          u = (0, l.A)(c.label, (0, o.A)(c));
-        return i.createElement("div", { className: c.root }, i.createElement("span", { className: u, "data-testid": a }, t > 0 ? (0, s.E)(t, m) : d.fs));
-      };
-    },
     xLtY: (e, t, a) => {
       a.d(t, { A: () => d });
       var i = a("q1tI"),
@@ -460,35 +442,6 @@
           a.action.filter((0, n.A)(e, "target.value", ""));
         }, 500);
         return i.createElement(s.s, { flex: "1", ms: "spacing.m", my: 0, w: { md: "375px", base: "320px" } }, i.createElement(o.D, { isDisabled: d.isLoadingAll, onChange: m, size: "medium", placeholder: t }));
-      };
-    },
-    ZH8F: (e, t, a) => {
-      a.d(t, { e: () => l, g: () => i });
-      let i = (function (e) {
-        return (e.FILTER = "table-filter"), (e.PLAY = "table-play"), e;
-      })({});
-      const l = (e, t) => new CustomEvent(e, { detail: t });
-    },
-    dalA: (e, t, a) => {
-      a.d(t, { A: () => l });
-      var i = a("q1tI");
-      const l = function (e, t, a) {
-        let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : document;
-        const n = (e) => {
-          let { detail: i } = e;
-          i.context.ID === a.ID && i.context.TYPE === a.TYPE && t(i);
-        };
-        return (
-          i.useEffect(() =>
-            l && l.addEventListener
-              ? (l.addEventListener(e, n),
-                () => {
-                  l.removeEventListener(e, n);
-                })
-              : () => {}
-          ),
-          { eventName: e, handleEvent: n }
-        );
       };
     },
     Eiyd: (e, t, a) => {
@@ -522,9 +475,9 @@
     "1h7S": (e, t, a) => {
       a.d(t, { Ay: () => c, PK: () => s });
       a("PHi8"), a("N/s9");
-      var i = a("pxHn"),
+      var i = a("ZwuA"),
         l = a("Jfek");
-      const [n, r, s] = (0, i.q)({ name: "ToolbarContext" }),
+      const [n, r, s] = (0, i.q6)({ name: "ToolbarContext" }),
         o = { context: { ID: "", TYPE: "" }, id: "", isEditable: !1, isShareable: !1, isLoveable: !1, isDownloadable: !1, isSponsored: !1, shareType: l.Gb.song, type: "" },
         c = (e) => ({ ...o, ...e });
     },
@@ -574,9 +527,9 @@
         k = a("pQlO"),
         O = a("0oF4"),
         B = a("r4LN"),
-        M = a("wkd/"),
+        G = a("wkd/"),
         F = a("LGn+"),
-        G = a("tgyz"),
+        M = a("tgyz"),
         H = a("CxZw"),
         U = a("SehT");
       const Y = (0, i.memo)(
@@ -584,7 +537,7 @@
           (e) => {
             let { data: t, index: a, style: l } = e;
             const { context: n, container: r, shouldExplicitBeHidden: s } = (0, P.$A)(),
-              { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, G.A)(n, r, !0),
+              { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, M.A)(n, r, !0),
               p = t.toDisplay[a],
               E = p.item.hasExplicitLyrics && s,
               A = (0, i.useCallback)(
@@ -599,7 +552,7 @@
                 },
                 [t.toPlay, m]
               );
-            return i.createElement(f.A.Row, { style: l, uuid: p.uuid, id: p.item.id, index: p.index, isActive: u(p.item) && o.isSameContext, isReadable: p.item.right === H.A.READABLE, isRestrictedByExplicit: E, type: p.item.type, isDraggable: !0 }, i.createElement(F.A, { size: I.TITLE.SIZE }, i.createElement(F.A.Play, { ariaLabel: (0, c.AP)("generic_action_playsongXbyartistX_web", { sprintf: [p.item.title, (0, R.A)(p, "item.artists[0].name", "")] }), hasExplicitCover: p.item.parent.hasExplicitCover, onPlayItems: A, pictureUrl: p.item.cover(D.r4).url }), _ || (_ = i.createElement(F.A.Download, null)), i.createElement(F.A.PlayableLabel, { hasExplicitLyrics: p.item.hasExplicitLyrics, label: "".concat(p.item.number || 0, ". ").concat(p.item.title), onPlayItems: A, tooltipText: (0, U.Y)(p.item, s) }), i.createElement(f.A.IconGroup, null, i.createElement(F.A.ShowLyrics, { item: p.item, lyricsId: p.item.lyricsId, onPlayLyrics: y }), b || (b = i.createElement(F.A.AddToFeedback, null)), i.createElement(F.A.OpenContextMenu, { item: p.item }))), i.createElement(f.A.CellBody, { breakpoint: I.PARENT.BREAKPOINT, size: I.PARENT.SIZE }, i.createElement(B.A, { links: [{ ...p.item.parent, type: d.Ay.Album }] })), i.createElement(f.A.CellBody, { size: I.DURATION.SIZE }, i.createElement(k.A, { duration: p.item.duration })), i.createElement(f.A.CellBody, { breakpoint: I.POPULARITY.BREAKPOINT, size: I.POPULARITY.SIZE }, i.createElement(O.A, { rank: p.item.popularity })), i.createElement(f.A.CellBody, { align: I.SELECT.ALIGN, size: I.SELECT.SIZE }, T || (T = i.createElement(M.A, null))));
+            return i.createElement(f.A.Row, { style: l, uuid: p.uuid, id: p.item.id, index: p.index, isActive: u(p.item) && o.isSameContext, isReadable: p.item.right === H.A.READABLE, isRestrictedByExplicit: E, type: p.item.type, isDraggable: !0 }, i.createElement(F.A, { size: I.TITLE.SIZE }, i.createElement(F.A.Play, { ariaLabel: (0, c.AP)("generic_action_playsongXbyartistX_web", { sprintf: [p.item.title, (0, R.A)(p, "item.artists[0].name", "")] }), hasExplicitCover: p.item.parent.hasExplicitCover, onPlayItems: A, pictureUrl: p.item.cover(D.r4).url }), _ || (_ = i.createElement(F.A.Download, null)), i.createElement(F.A.PlayableLabel, { hasExplicitLyrics: p.item.hasExplicitLyrics, label: "".concat(p.item.number || 0, ". ").concat(p.item.title), onPlayItems: A, tooltipText: (0, U.Y)(p.item, s) }), i.createElement(f.A.IconGroup, null, i.createElement(F.A.ShowLyrics, { item: p.item, lyricsId: p.item.lyricsId, onPlayLyrics: y }), b || (b = i.createElement(F.A.AddToFeedback, null)), i.createElement(F.A.OpenContextMenu, { item: p.item }))), i.createElement(f.A.CellBody, { breakpoint: I.PARENT.BREAKPOINT, size: I.PARENT.SIZE }, i.createElement(B.A, { links: [{ ...p.item.parent, type: d.Ay.Album }] })), i.createElement(f.A.CellBody, { size: I.DURATION.SIZE }, i.createElement(k.A, { duration: p.item.duration })), i.createElement(f.A.CellBody, { breakpoint: I.POPULARITY.BREAKPOINT, size: I.POPULARITY.SIZE }, i.createElement(O.A, { rank: p.item.popularity })), i.createElement(f.A.CellBody, { align: I.SELECT.ALIGN, size: I.SELECT.SIZE }, T || (T = i.createElement(G.A, null))));
           },
           (e) => {
             let { index: t, data: a } = e;
@@ -608,8 +561,8 @@
         ),
         N.t7
       );
-      var K,
-        z,
+      var z,
+        K,
         q,
         Z = a("ZH8F"),
         V = a("dalA"),
@@ -620,7 +573,7 @@
         const r = { id: a, type: h.Kk.TOP_ARTIST },
           { manageItems: s, tableItems: o } = (0, X.A)(a, l, t),
           d = (0, W.A)(o, t),
-          { playerStatus: m, play: u } = (0, G.A)(t, r, !0);
+          { playerStatus: m, play: u } = (0, M.A)(t, r, !0);
         (0, V.A)(
           Z.g.PLAY,
           () => {
@@ -632,11 +585,11 @@
         return i.createElement(
           P.ru,
           { value: p },
-          i.createElement(S.s, { alignItems: "center", mb: "spacing.2xl" }, i.createElement(C.A, { title: (0, c.AP)("Top titres") }), K || (K = i.createElement(L.A, null))),
+          i.createElement(S.s, { alignItems: "center", mb: "spacing.2xl" }, i.createElement(C.A, { title: (0, c.AP)("Top titres") }), z || (z = i.createElement(L.A, null))),
           i.createElement(
             f.A,
             { rowCount: o.toDisplay.length },
-            i.createElement(f.A.Header, null, i.createElement(f.A.CellHead, { size: I.TITLE.SIZE, sortPath: "item.title" }, (0, c.AP)("datagrid_title_trackUPP_web")), i.createElement(f.A.CellHead, { breakpoint: I.PARENT.BREAKPOINT, size: I.PARENT.SIZE, sortPath: "item.parent.name" }, (0, c.AP)("datagrid_title_albumUPP_web")), i.createElement(f.A.CellHead, { ariaLabel: (0, c.AP)("sortingmenu_title_duration_web"), size: I.DURATION.SIZE, sortPath: "item.duration" }, z || (z = i.createElement(A.m, null))), i.createElement(f.A.CellHead, { breakpoint: I.POPULARITY.BREAKPOINT, size: I.POPULARITY.SIZE, sortPath: "item.popularity" }, (0, c.AP)("datagrid_title_popularityabbrevUPP_web")), i.createElement(f.A.CellHead, { align: I.SELECT.ALIGN, size: I.SELECT.SIZE }, q || (q = i.createElement(x.A, null)))),
+            i.createElement(f.A.Header, null, i.createElement(f.A.CellHead, { size: I.TITLE.SIZE, sortPath: "item.title" }, (0, c.AP)("datagrid_title_trackUPP_web")), i.createElement(f.A.CellHead, { breakpoint: I.PARENT.BREAKPOINT, size: I.PARENT.SIZE, sortPath: "item.parent.name" }, (0, c.AP)("datagrid_title_albumUPP_web")), i.createElement(f.A.CellHead, { ariaLabel: (0, c.AP)("sortingmenu_title_duration_web"), size: I.DURATION.SIZE, sortPath: "item.duration" }, K || (K = i.createElement(A.m, null))), i.createElement(f.A.CellHead, { breakpoint: I.POPULARITY.BREAKPOINT, size: I.POPULARITY.SIZE, sortPath: "item.popularity" }, (0, c.AP)("datagrid_title_popularityabbrevUPP_web")), i.createElement(f.A.CellHead, { align: I.SELECT.ALIGN, size: I.SELECT.SIZE }, q || (q = i.createElement(x.A, null)))),
             i.createElement(
               f.A.Body,
               null,
@@ -664,7 +617,7 @@
           (e) => {
             let { data: t, index: a, style: l } = e;
             const { context: n, container: r, shouldExplicitBeHidden: s } = (0, P.$A)(),
-              { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, G.A)(n, r),
+              { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, M.A)(n, r),
               p = t.toDisplay[a],
               E = p.item.hasExplicitLyrics && s,
               A = (e, i) => {
@@ -698,7 +651,7 @@
               i.createElement(f.A.CellBody, { breakpoint: j.DATE.BREAKPOINT, size: j.DATE.SIZE }, i.createElement($.A, { date: new Date(p.item.date).getTime(), dataTestId: "added" })),
               i.createElement(f.A.CellBody, { size: j.DURATION.SIZE }, i.createElement(k.A, { duration: p.item.duration })),
               i.createElement(f.A.CellBody, { breakpoint: j.POPULARITY.BREAKPOINT, size: j.POPULARITY.SIZE }, i.createElement(O.A, { rank: p.item.popularity })),
-              i.createElement(f.A.CellBody, { align: j.SELECT.ALIGN, size: j.SELECT.SIZE }, oe || (oe = i.createElement(M.A, null)))
+              i.createElement(f.A.CellBody, { align: j.SELECT.ALIGN, size: j.SELECT.SIZE }, oe || (oe = i.createElement(G.A, null)))
             );
           },
           (e) => {
@@ -730,7 +683,7 @@
             }, [n]);
           const E = { ID: n, TYPE: "artist_collected_tracks_page" },
             v = { id: n, type: h.Kk.TRACK },
-            { playerStatus: g } = (0, G.A)(E, v),
+            { playerStatus: g } = (0, M.A)(E, v),
             I = null != u && null !== (l = u.me) && void 0 !== l && null !== (l = l.userFavorites) && void 0 !== l && null !== (l = l.byArtist) && void 0 !== l && null !== (l = l.tracks) && void 0 !== l && l.edges ? (u.me.userFavorites.byArtist.tracks.edges || []).reduce((e, t) => (t.node && e.push({ ...t.node, date: t.favoritedAt }), e), []) : [];
           const { manageItems: _, tableItems: b } = (0, X.A)(n, I, E),
             T = (0, W.A)(b, E);
@@ -847,20 +800,20 @@
         ke = a("sdUN"),
         Oe = a("TDRX"),
         Be = a("juqV"),
-        Me = a("xobL");
+        Ge = a("xobL");
       a("aRRr");
       const Fe = { TITLE: { SIZE: v.uq.Full }, PARENT: { SIZE: v.uq.xxl } };
-      var Ge;
+      var Me;
       const He = (e) => {
           let { data: t, index: a, style: l } = e;
           const n = t.toDisplay[a],
             { context: r, container: s, shouldExplicitBeHidden: o } = i.useContext(P.Gt),
-            { playerStatus: m, play: u, isItemLoadedInPlayer: p } = (0, G.A)(r, s, !0),
+            { playerStatus: m, play: u, isItemLoadedInPlayer: p } = (0, M.A)(r, s, !0),
             E = n.item.hasExplicitLyrics && o,
             A = (e, a) => {
               u({ playIndex: a, playItems: t.toPlay, isTrackActive: e });
             };
-          return i.createElement(f.A.Row, { style: l, uuid: n.uuid, id: n.item.id, index: n.index, isActive: p(n.item) && m.isSameContext, isReadable: n.item.right === H.A.READABLE, isRestrictedByExplicit: E, type: n.item.type }, i.createElement(F.A, { size: Fe.TITLE.SIZE }, i.createElement(F.A.Play, { ariaLabel: (0, c.AP)("generic_action_playsongXbyartistX_web", { sprintf: [n.item.title, n.item.parent.name] }), hasExplicitCover: n.item.parent.hasExplicitCover, onPlayItems: A, pictureUrl: n.item.cover(D.r8).url }), Ge || (Ge = i.createElement(F.A.Download, null)), i.createElement(F.A.PlayableLabel, { description: n.item.description, hasExplicitLyrics: n.item.hasExplicitLyrics, label: n.item.title, onPlayItems: A, tooltipText: (0, U.Y)(n.item, o) }), i.createElement(f.A.IconGroup, null, i.createElement(F.A.OpenContextMenu, { item: n.item }))), i.createElement(f.A.CellBody, { size: Fe.PARENT.SIZE }, i.createElement(B.A, { links: [{ ...n.item.parent, type: d.Ay.Show }] })));
+          return i.createElement(f.A.Row, { style: l, uuid: n.uuid, id: n.item.id, index: n.index, isActive: p(n.item) && m.isSameContext, isReadable: n.item.right === H.A.READABLE, isRestrictedByExplicit: E, type: n.item.type }, i.createElement(F.A, { size: Fe.TITLE.SIZE }, i.createElement(F.A.Play, { ariaLabel: (0, c.AP)("generic_action_playsongXbyartistX_web", { sprintf: [n.item.title, n.item.parent.name] }), hasExplicitCover: n.item.parent.hasExplicitCover, onPlayItems: A, pictureUrl: n.item.cover(D.r8).url }), Me || (Me = i.createElement(F.A.Download, null)), i.createElement(F.A.PlayableLabel, { description: n.item.description, hasExplicitLyrics: n.item.hasExplicitLyrics, label: n.item.title, onPlayItems: A, tooltipText: (0, U.Y)(n.item, o) }), i.createElement(f.A.IconGroup, null, i.createElement(F.A.OpenContextMenu, { item: n.item }))), i.createElement(f.A.CellBody, { size: Fe.PARENT.SIZE }, i.createElement(B.A, { links: [{ ...n.item.parent, type: d.Ay.Show }] })));
         },
         Ue = i.memo(He, N.t7),
         Ye = (e) => {
@@ -868,7 +821,7 @@
           const r = { id: a, type: h.Kk.EPISODE },
             s = y.F4.lg,
             { manageItems: o, tableItems: c } = (0, X.A)(a, l, t),
-            { playerStatus: d } = (0, G.A)(t, r, !0),
+            { playerStatus: d } = (0, M.A)(t, r, !0),
             m = (0, P.Ay)({ container: r, context: t, hasBackground: !1, manageItems: o, playerStatus: d, rowHeight: s, shouldExplicitBeHidden: n });
           return i.createElement(
             P.ru,
@@ -884,12 +837,12 @@
             )
           );
         },
-        Ke = { TITLE: { SIZE: v.uq.Full } };
-      var ze, qe;
+        ze = { TITLE: { SIZE: v.uq.Full } };
+      var Ke, qe;
       const Ze = (e) => {
           let { data: t, index: a, style: l } = e;
           const { context: n, container: r, shouldExplicitBeHidden: s } = (0, P.$A)(),
-            { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, G.A)(n, r, !1),
+            { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, M.A)(n, r, !1),
             p = t.toDisplay[a],
             E = p.item.hasExplicitLyrics && s,
             A = (0, i.useCallback)(
@@ -904,14 +857,14 @@
               },
               [t.toPlay, m]
             );
-          return i.createElement(w.OJ, { value: { item: d.Ay.Track, itemIndex: a, itemId: t.toDisplay[a].item.id } }, i.createElement(f.A.Row, { style: l, uuid: p.uuid, id: p.item.id, index: p.index, isActive: u(p.item) && o.isSameContext, isReadable: p.item.right === H.A.READABLE, isRestrictedByExplicit: E, type: p.item.type, isDraggable: !0 }, i.createElement(F.A, { size: Ke.TITLE.SIZE }, i.createElement(F.A.Play, { ariaLabel: (0, c.AP)("generic_action_playsongXbyartistX_web", { sprintf: [p.item.title, (0, R.A)(p, "item.artists[0].name", "")] }), hasExplicitCover: p.item.parent.hasExplicitCover, onPlayItems: A, pictureUrl: p.item.cover(D.r4).url }), ze || (ze = i.createElement(F.A.Download, null)), i.createElement(F.A.PlayableLabel, { hasExplicitLyrics: p.item.hasExplicitLyrics, label: "".concat(p.item.number || 0, ". ").concat(p.item.title), onPlayItems: A, tooltipText: (0, U.Y)(p.item, s) }), i.createElement(f.A.IconGroup, null, i.createElement(F.A.ShowLyrics, { item: p.item, lyricsId: p.item.lyricsId, onPlayLyrics: y }), qe || (qe = i.createElement(F.A.AddToFeedback, null)), i.createElement(F.A.OpenContextMenu, { item: p.item })))));
+          return i.createElement(w.OJ, { value: { item: d.Ay.Track, itemIndex: a, itemId: t.toDisplay[a].item.id } }, i.createElement(f.A.Row, { style: l, uuid: p.uuid, id: p.item.id, index: p.index, isActive: u(p.item) && o.isSameContext, isReadable: p.item.right === H.A.READABLE, isRestrictedByExplicit: E, type: p.item.type, isDraggable: !0 }, i.createElement(F.A, { size: ze.TITLE.SIZE }, i.createElement(F.A.Play, { ariaLabel: (0, c.AP)("generic_action_playsongXbyartistX_web", { sprintf: [p.item.title, (0, R.A)(p, "item.artists[0].name", "")] }), hasExplicitCover: p.item.parent.hasExplicitCover, onPlayItems: A, pictureUrl: p.item.cover(D.r4).url }), Ke || (Ke = i.createElement(F.A.Download, null)), i.createElement(F.A.PlayableLabel, { hasExplicitLyrics: p.item.hasExplicitLyrics, label: "".concat(p.item.number || 0, ". ").concat(p.item.title), onPlayItems: A, tooltipText: (0, U.Y)(p.item, s) }), i.createElement(f.A.IconGroup, null, i.createElement(F.A.ShowLyrics, { item: p.item, lyricsId: p.item.lyricsId, onPlayLyrics: y }), qe || (qe = i.createElement(F.A.AddToFeedback, null)), i.createElement(F.A.OpenContextMenu, { item: p.item })))));
         },
         Ve = (0, i.memo)(Ze, N.t7),
         Xe = (e) => {
           let { context: t, id: a, items: l, shouldExplicitBeHidden: n = !1 } = e;
           const r = { id: a, type: h.Kk.ALBUM },
             { manageItems: s, tableItems: o } = (0, X.A)(a, l, t),
-            { playerStatus: c } = (0, G.A)(t, r, !0),
+            { playerStatus: c } = (0, M.A)(t, r, !0),
             d = (0, P.Ay)({ container: r, context: t, hasBackground: !1, manageItems: s, playerStatus: c, shouldExplicitBeHidden: n });
           return i.createElement(
             P.ru,
@@ -934,7 +887,7 @@
             (e) => {
               let { data: t, index: a, style: l } = e;
               const { context: n, container: r, shouldExplicitBeHidden: s } = (0, P.$A)(),
-                { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, G.A)(n, r, !1),
+                { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, M.A)(n, r, !1),
                 p = t.toDisplay[a],
                 E = p.item.hasExplicitLyrics && s,
                 A = (0, i.useCallback)(
@@ -962,7 +915,7 @@
           let { context: t, id: a, items: l, shouldExplicitBeHidden: n = !1 } = e;
           const r = { id: a, type: h.Kk.PLAYLIST },
             { manageItems: s, tableItems: o } = (0, X.A)(a, l, t),
-            { playerStatus: c } = (0, G.A)(t, r, !0),
+            { playerStatus: c } = (0, M.A)(t, r, !0),
             d = (0, P.Ay)({ container: r, context: t, hasBackground: !1, manageItems: s, playerStatus: c, shouldExplicitBeHidden: n });
           return i.createElement(
             P.ru,
@@ -984,7 +937,7 @@
           let { data: t, index: a, style: l } = e;
           const n = t.toDisplay[a],
             { context: r, container: s, shouldExplicitBeHidden: o } = i.useContext(P.Gt),
-            { playerStatus: d, play: m, isItemLoadedInPlayer: u } = (0, G.A)(r, s, !1),
+            { playerStatus: d, play: m, isItemLoadedInPlayer: u } = (0, M.A)(r, s, !1),
             p = n.item.hasExplicitLyrics && o,
             E = (e, a) => {
               m({ playIndex: a, playItems: t.toPlay, isTrackActive: e });
@@ -997,7 +950,7 @@
           const r = { id: a, type: h.Kk.SHOW },
             s = y.F4.lg,
             { manageItems: o, tableItems: c } = (0, X.A)(a, l, t),
-            { playerStatus: d } = (0, G.A)(t, r, !0),
+            { playerStatus: d } = (0, M.A)(t, r, !0),
             m = (0, P.Ay)({ container: r, context: t, hasBackground: !1, manageItems: o, playerStatus: d, rowHeight: s, shouldExplicitBeHidden: n });
           return i.createElement(
             P.ru,
@@ -1064,7 +1017,7 @@
           if (-1 === yt.indexOf(s)) throw new Error('Item of type "'.concat(s, '" is not handled by the Artist Highlight.'));
           const o = String(t[d.vn[s]]),
             m = { ID: o, TYPE: (0, u.Sx)(s) },
-            p = (0, l.d4)((e) => (0, Me.Uw)(e.user) === At.g),
+            p = (0, l.d4)((e) => (0, Ge.Uw)(e.user) === At.g),
             E = () => {
               const e = Number((0, R.A)(t, "SONGS.total")) || Number(t.NB_SONG) || 0;
               return A() || e <= 6 ? "" : s === d.Ay.Album ? (0, c.WI)("artistpage_action_accessalbumpageXtracks_web", "artistpage_action_accessalbumpageXtracks_web", { count: e, sprintf: [e] }) : (0, c.WI)("artistpage_action_accessplaylistpageXtracks_web", "artistpage_action_accessplaylistpageXtracks_web", { count: e, sprintf: [e] });
@@ -1108,7 +1061,7 @@
       const bt = (e) => {
           let { data: t, index: a, style: l } = e;
           const { context: n, container: r, shouldExplicitBeHidden: s } = (0, P.$A)(),
-            { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, G.A)(n, r, !0),
+            { playerStatus: o, play: m, isItemLoadedInPlayer: u } = (0, M.A)(n, r, !0),
             p = t.toDisplay[a],
             E = p.item.hasExplicitLyrics && s,
             A = (0, i.useCallback)(
@@ -1130,7 +1083,7 @@
           let { context: t, id: a, items: l, maxItemsToDisplay: n, shouldExplicitBeHidden: r = !1 } = e;
           const s = { id: a, type: h.Kk.TOP_ARTIST },
             { manageItems: o, tableItems: c } = (0, X.A)(a, l, t),
-            { playerStatus: d } = (0, G.A)(t, s, !0);
+            { playerStatus: d } = (0, M.A)(t, s, !0);
           n && (c.toDisplay = c.toDisplay.slice(0, n));
           const m = (0, P.Ay)({ container: s, context: t, hasBackground: !1, manageItems: o, playerStatus: d, shouldExplicitBeHidden: r });
           return i.createElement(
@@ -1185,30 +1138,30 @@
           R = wt(null == I || null === (a = I.artist) || void 0 === a ? void 0 : a.albums.edges),
           D = wt(null == b || null === (l = b.artist) || void 0 === l ? void 0 : l.albums.edges),
           B = wt(null == f || null === (s = f.artist) || void 0 === s ? void 0 : s.albums.edges);
-        let M = null == v || null === (o = v.artist) || void 0 === o ? void 0 : o.albums.pageInfo.hasNextPage,
+        let G = null == v || null === (o = v.artist) || void 0 === o ? void 0 : o.albums.pageInfo.hasNextPage,
           F = () => {
             var e;
             g({ variables: { cursor: null == v || null === (e = v.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
           };
-        const G = [[N, (0, c.AP)("favoritessidebar_title_albums_web"), "albums"]];
-        var H, U, Y, K, z, q, Z, V, X, W;
+        const M = [[N, (0, c.AP)("favoritessidebar_title_albums_web"), "albums"]];
+        var H, U, Y, z, K, q, Z, V, X, W;
         !1 === (null == v || null === (d = v.artist) || void 0 === d ? void 0 : d.albums.pageInfo.hasNextPage) &&
-          (G.push([R, (0, c.AP)("discographytype_title_EPs_web"), "eps"]),
-          (M = null == I || null === (H = I.artist) || void 0 === H ? void 0 : H.albums.pageInfo.hasNextPage),
+          (M.push([R, (0, c.AP)("discographytype_title_EPs_web"), "eps"]),
+          (G = null == I || null === (H = I.artist) || void 0 === H ? void 0 : H.albums.pageInfo.hasNextPage),
           (F = () => {
             var e;
             _({ variables: { cursor: null == I || null === (e = I.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
           }),
           !1 === (null == I || null === (U = I.artist) || void 0 === U ? void 0 : U.albums.pageInfo.hasNextPage) &&
-            ((M = null == b || null === (Y = b.artist) || void 0 === Y ? void 0 : Y.albums.pageInfo.hasNextPage),
-            G.push([D, (0, c.AP)("discographytype_title_singles_web"), "singles"]),
+            ((G = null == b || null === (Y = b.artist) || void 0 === Y ? void 0 : Y.albums.pageInfo.hasNextPage),
+            M.push([D, (0, c.AP)("discographytype_title_singles_web"), "singles"]),
             (F = () => {
               var e;
               T({ variables: { cursor: null == b || null === (e = b.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
             }),
-            !1 === (null == b || null === (K = b.artist) || void 0 === K ? void 0 : K.albums.pageInfo.hasNextPage) &&
-              ((M = null == f || null === (X = f.artist) || void 0 === X ? void 0 : X.albums.pageInfo.hasNextPage),
-              G.push([B, (0, c.AP)("discography_title_featuredin_web"), "artist_featured_discography"]),
+            !1 === (null == b || null === (z = b.artist) || void 0 === z ? void 0 : z.albums.pageInfo.hasNextPage) &&
+              ((G = null == f || null === (X = f.artist) || void 0 === X ? void 0 : X.albums.pageInfo.hasNextPage),
+              M.push([B, (0, c.AP)("discography_title_featuredin_web"), "artist_featured_discography"]),
               (F = () => {
                 var e;
                 C({ variables: { cursor: null == f || null === (e = f.artist) || void 0 === e ? void 0 : e.albums.pageInfo.endCursor } });
@@ -1217,8 +1170,8 @@
         let J = !1;
         return i.createElement(
           Lt.A,
-          { hasMore: M, loadMore: () => y(() => F()), loader: Ct || (Ct = i.createElement(Q.A, { key: "loader" })) },
-          G.map((e) => {
+          { hasMore: G, loadMore: () => y(() => F()), loader: Ct || (Ct = i.createElement(Q.A, { key: "loader" })) },
+          M.map((e) => {
             let [t, a, l] = e;
             return (
               t.length > 0 &&
@@ -1263,14 +1216,14 @@
       };
       var Ot,
         Bt = a("23Qi"),
-        Mt = a("Weh+"),
+        Gt = a("Weh+"),
         Ft = a("gXj/"),
-        Gt = a("FFW9"),
+        Mt = a("FFW9"),
         Ht = a("A0BP"),
         Ut = a("lD5d"),
         Yt = a("5Loq"),
-        Kt = a("934x"),
-        zt = a("xvdY"),
+        zt = a("934x"),
+        Kt = a("xvdY"),
         qt = a("9OcB"),
         Zt = a("AZMZ"),
         Vt = a("LpaV"),
@@ -1284,7 +1237,7 @@
         return i.createElement(
           Oe.a,
           { as: "aside", className: "top-cell top-cell-right", position: "relative" },
-          i.createElement(st.D, { variant: "heading.m" }, i.createElement(Kt.A, { href: "/artist/".concat(a, "/related_artist") }, i.createElement("span", { className: "label" }, (0, c.AP)("Artistes similaires")))),
+          i.createElement(st.D, { variant: "heading.m" }, i.createElement(zt.A, { href: "/artist/".concat(a, "/related_artist") }, i.createElement("span", { className: "label" }, (0, c.AP)("Artistes similaires")))),
           o.map((e) => {
             var t;
             return e.node
@@ -1292,12 +1245,12 @@
                   w.OJ,
                   { key: e.node.id, value: { item: d.Ay.Artist, itemId: e.node.id, section: ie } },
                   i.createElement(
-                    Mt.Q,
+                    Gt.Q,
                     { mt: "spacing.l", w: "100%" },
                     i.createElement(Ft.h, null, i.createElement(qt.A, { alt: e.node.name, borderRadius: "rounded", src: null === (t = e.node.picture) || void 0 === t ? void 0 : t.small[0], type: d.Ay.Artist })),
-                    i.createElement(Gt.f, { flex: 1 }, i.createElement(Ht.n, { _hover: { textDecoration: "underline" } }, i.createElement(ct.A, { to: "/artist/".concat(e.node.id), "data-instance": "artist_name" }, e.node.name)), i.createElement(Ut.P, null, (0, c.WI)("%s fan", "%s fans", { count: e.node.fansCount, sprintf: [(0, Bt.A)(e.node.fansCount)] }))),
+                    i.createElement(Mt.f, { flex: 1 }, i.createElement(Ht.n, { _hover: { textDecoration: "underline" } }, i.createElement(ct.A, { to: "/artist/".concat(e.node.id), "data-instance": "artist_name" }, e.node.name)), i.createElement(Ut.P, null, (0, c.WI)("%s fan", "%s fans", { count: e.node.fansCount, sprintf: [(0, Bt.A)(e.node.fansCount)] }))),
                     i.createElement(
-                      Gt.f,
+                      Mt.f,
                       { displayOnHover: !0 },
                       i.createElement(
                         Vt.K.Provider,
@@ -1313,7 +1266,7 @@
                         })
                       )
                     ),
-                    i.createElement(Gt.f, null, i.createElement(zt.A, { type: d.Ay.Artist, id: e.node.id, context: { ID: Number(e.node.id), TYPE: (0, u.Pe)(d.Ay.Artist, p.Di) } }))
+                    i.createElement(Mt.f, null, i.createElement(Kt.A, { type: d.Ay.Artist, id: e.node.id, context: { ID: Number(e.node.id), TYPE: (0, u.Pe)(d.Ay.Artist, p.Di) } }))
                   )
                 )
               : null;
@@ -1332,16 +1285,16 @@
         const { loading: m, data: u, error: p } = (0, pe.tjO)({ variables: { artistId: o, relatedPlaylistFirst: 3, cursor: null } }),
           { loading: E, data: A, error: y } = (0, pe.wi_)({ variables: { artistId: o, curatedPlaylistFirst: 2 } });
         if (p || null == u || null === (t = u.artist) || void 0 === t || !t.playlists.relatedPlaylists.edges.length || y || null == A || null === (a = A.artist) || void 0 === a || !a.playlists.curatedPlaylists.edges.length) return null;
-        if (m || E) return i.createElement(Oe.a, null, i.createElement(st.D, { variant: "heading.m" }, i.createElement(Kt.A, { href: "/artist/".concat(o, "/related_playlist") }, i.createElement("span", { className: "label" }, (0, c.AP)("Playlists")))), Jt || (Jt = i.createElement(Qt.k, null)));
+        if (m || E) return i.createElement(Oe.a, null, i.createElement(st.D, { variant: "heading.m" }, i.createElement(zt.A, { href: "/artist/".concat(o, "/related_playlist") }, i.createElement("span", { className: "label" }, (0, c.AP)("Playlists")))), Jt || (Jt = i.createElement(Qt.k, null)));
         const h = [...(null !== (l = null == A || null === (n = A.artist) || void 0 === n ? void 0 : n.playlists.curatedPlaylists.edges) && void 0 !== l ? l : []), ...(null !== (r = null == u || null === (s = u.artist) || void 0 === s ? void 0 : s.playlists.relatedPlaylists.edges) && void 0 !== r ? r : [])].slice(0, 3);
         return h.length
           ? i.createElement(
               Oe.a,
               { position: "relative" },
-              i.createElement(st.D, { variant: "heading.m" }, i.createElement(Kt.A, { href: "/artist/".concat(o, "/related_playlist") }, i.createElement("span", { className: "label" }, (0, c.AP)("Playlists")))),
+              i.createElement(st.D, { variant: "heading.m" }, i.createElement(zt.A, { href: "/artist/".concat(o, "/related_playlist") }, i.createElement("span", { className: "label" }, (0, c.AP)("Playlists")))),
               h.map((e) => {
                 var t, a, l, n, r, s;
-                return e.node ? i.createElement(w.OJ, { key: e.node.id, value: { item: d.Ay.Playlist, itemId: e.node.id, section: ae } }, i.createElement(Mt.Q, { mt: "spacing.l", w: "100%" }, i.createElement(Ft.h, null, i.createElement(qt.A, { alt: e.node.title, src: null === (t = e.node.picture) || void 0 === t ? void 0 : t.small[0], type: d.Ay.Playlist })), i.createElement(Gt.f, { flex: 1 }, i.createElement(Ht.n, { _hover: { textDecoration: "underline" } }, i.createElement(ct.A, { to: "/playlist/".concat(e.node.id), "data-instance": "playlist_name" }, e.node.title)), e.node.fansCount && i.createElement(Ut.P, null, (0, c.WI)("%s fan", "%s fans", { count: e.node.fansCount, sprintf: [(0, Bt.A)(e.node.fansCount)] }))), i.createElement(Gt.f, { displayOnHover: !0 }, i.createElement(Vt.K.Provider, { value: (0, Xt.uC)() }, i.createElement($t.A, { anchor: i.createElement(rt.K0, { variant: "ghost", size: "small", "aria-label": "playlist_contextmenu", _focus: { outline: "none" } }, jt || (jt = i.createElement(Yt.j, null))), context: { ID: e.node.id, TYPE: "artist_similar_playlist" }, id: e.node.id, data: { picture: null === (a = e.node.picture) || void 0 === a ? void 0 : a.small[0], name: e.node.title, PARENT_USER_ID: null !== (l = null === (n = e.node.owner) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : "", NB_SONG: e.node.estimatedTracksCount, STATUS: e.node.isPrivate ? ea.Gd.PRIVATE : e.node.isCollaborative ? ea.Gd.COLLABORATIVE : ea.Gd.PUBLIC, USER_ID: null !== (r = null === (s = e.node.owner) || void 0 === s ? void 0 : s.id) && void 0 !== r ? r : "" } }))), i.createElement(Gt.f, null, i.createElement(zt.A, { type: d.Ay.Playlist, id: e.node.id, context: { ID: e.node.id, TYPE: "artist_similar_playlist" } })))) : null;
+                return e.node ? i.createElement(w.OJ, { key: e.node.id, value: { item: d.Ay.Playlist, itemId: e.node.id, section: ae } }, i.createElement(Gt.Q, { mt: "spacing.l", w: "100%" }, i.createElement(Ft.h, null, i.createElement(qt.A, { alt: e.node.title, src: null === (t = e.node.picture) || void 0 === t ? void 0 : t.small[0], type: d.Ay.Playlist })), i.createElement(Mt.f, { flex: 1 }, i.createElement(Ht.n, { _hover: { textDecoration: "underline" } }, i.createElement(ct.A, { to: "/playlist/".concat(e.node.id), "data-instance": "playlist_name" }, e.node.title)), e.node.fansCount && i.createElement(Ut.P, null, (0, c.WI)("%s fan", "%s fans", { count: e.node.fansCount, sprintf: [(0, Bt.A)(e.node.fansCount)] }))), i.createElement(Mt.f, { displayOnHover: !0 }, i.createElement(Vt.K.Provider, { value: (0, Xt.uC)() }, i.createElement($t.A, { anchor: i.createElement(rt.K0, { variant: "ghost", size: "small", "aria-label": "playlist_contextmenu", _focus: { outline: "none" } }, jt || (jt = i.createElement(Yt.j, null))), context: { ID: e.node.id, TYPE: "artist_similar_playlist" }, id: e.node.id, data: { picture: null === (a = e.node.picture) || void 0 === a ? void 0 : a.small[0], name: e.node.title, PARENT_USER_ID: null !== (l = null === (n = e.node.owner) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : "", NB_SONG: e.node.estimatedTracksCount, STATUS: e.node.isPrivate ? ea.Gd.PRIVATE : e.node.isCollaborative ? ea.Gd.COLLABORATIVE : ea.Gd.PUBLIC, USER_ID: null !== (r = null === (s = e.node.owner) || void 0 === s ? void 0 : s.id) && void 0 !== r ? r : "" } }))), i.createElement(Mt.f, null, i.createElement(Kt.A, { type: d.Ay.Playlist, id: e.node.id, context: { ID: e.node.id, TYPE: "artist_similar_playlist" } })))) : null;
               })
             )
           : null;
@@ -1376,7 +1329,7 @@
           p = (null == r || null === (l = r.me) || void 0 === l || null === (l = l.userFavorites.byArtist) || void 0 === l ? void 0 : l.estimatedTracksCount) || 0;
         return p
           ? i.createElement(
-              Mt.Q,
+              Gt.Q,
               {
                 mb: "spacing.2xl",
                 w: "100%",
@@ -1387,7 +1340,7 @@
                 _hover: { cursor: "pointer" },
               },
               i.createElement(Ft.h, { position: "relative", "data-testid": "in_your_fav_thumbnail" }, i.createElement(qt.A, { size: "size.xl", src: m, isExplicitCover: u }), sa || (sa = i.createElement(Oe.a, { position: "absolute", top: 0, left: 0, zIndex: 1, width: "100%", height: "100%", bg: "background.accent.onLight.default", opacity: "0.4" })), i.createElement(qt.A, { position: "absolute", top: "50%", insetStart: "50%", transform: "translate(-50%, -50%)", variant: "favTracks", size: "size.s", borderRadius: "rounded", alt: (0, c.AP)("artistpageentrypoint_title_inyourfavorites_web"), zIndex: 3 })),
-              i.createElement(Gt.f, { flex: 1 }, i.createElement(Ht.n, { _hover: { textDecoration: "underline" }, _groupHover: { textDecoration: "underline" }, "data-testid": "in_your_fav_title" }, i.createElement(ct.A, { to: "/artist/".concat(n, "/").concat(Re.G.FAVORITES) }, (0, c.AP)("artistpageentrypoint_title_inyourfavorites_web"))), i.createElement(Ut.P, { "data-testid": "in_your_fav_subtitle" }, (0, c.WI)("%s titre", "%s titres", { sprintf: [p], count: p })))
+              i.createElement(Mt.f, { flex: 1 }, i.createElement(Ht.n, { _hover: { textDecoration: "underline" }, _groupHover: { textDecoration: "underline" }, "data-testid": "in_your_fav_title" }, i.createElement(ct.A, { to: "/artist/".concat(n, "/").concat(Re.G.FAVORITES) }, (0, c.AP)("artistpageentrypoint_title_inyourfavorites_web"))), i.createElement(Ut.P, { "data-testid": "in_your_fav_subtitle" }, (0, c.WI)("%s titre", "%s titres", { sprintf: [p], count: p })))
             )
           : null;
       };
@@ -1555,9 +1508,9 @@
       }
       const Oa = ka;
       var Ba,
-        Ma = a("aEwM"),
+        Ga = a("aEwM"),
         Fa = a("HXS3");
-      const Ga = (e) => {
+      const Ma = (e) => {
           var t;
           let { id: a } = e;
           const { data: l, loading: n, fetchMore: r } = (0, pe.ORW)({ variables: { artistId: a, relatedArtistFirst: 10, cursor: null } }),
@@ -1572,22 +1525,22 @@
                     return e ? i.createElement(w.OJ, { key: e.id, value: { legacyContext: { ID: e.id, TYPE: "artist_similar_artist", CONTEXT_ID: a } } }, i.createElement(Fa.A, { artistName: e.name, hasExplicitPicture: Boolean(null === (t = e.picture) || void 0 === t ? void 0 : t.explicitStatus), id: e.id, isFavorite: Boolean(e.isFavorite), nbOfFans: e.fansCount, picture: null === (l = e.picture) || void 0 === l ? void 0 : l.large[0] })) : null;
                   })
                 : null;
-          return i.createElement("div", { className: "container" }, i.createElement(Oe.a, { mb: "spacing.l" }, i.createElement(C.A, { title: (0, c.AP)("Artistes similaires") })), i.createElement(Ma.A, { hasMore: !!l.artist.relatedArtists && l.artist.relatedArtists.pageInfo.hasNextPage, loadMore: s, placeholder: { img: be.B.RECOMMENDATION, wording: (0, c.AP)("Aucun artiste similaire n'est disponible") } }, i.createElement(Dt.kK, null, d)));
+          return i.createElement("div", { className: "container" }, i.createElement(Oe.a, { mb: "spacing.l" }, i.createElement(C.A, { title: (0, c.AP)("Artistes similaires") })), i.createElement(Ga.A, { hasMore: !!l.artist.relatedArtists && l.artist.relatedArtists.pageInfo.hasNextPage, loadMore: s, placeholder: { img: be.B.RECOMMENDATION, wording: (0, c.AP)("Aucun artiste similaire n'est disponible") } }, i.createElement(Dt.kK, null, d)));
         },
         Ha = "jbzvm",
         Ua = "_hESX",
         Ya = "Pbkan",
-        Ka = "zbtBF";
-      var za;
+        za = "zbtBF";
+      var Ka;
       const qa = (e) => {
         let { id: t } = e;
         const { data: a, loading: l, error: n } = (0, pe.Wyk)({ variables: { artistId: t } });
-        if (l) return za || (za = i.createElement(Q.A, null));
+        if (l) return Ka || (Ka = i.createElement(Q.A, null));
         if (n) throw n;
         if (!a || !a.artist || !a.artist.bio) return null;
         const r = (0, Be.A)("heading-1", Ha),
           s = (0, Be.A)("heading-1", Ya);
-        return i.createElement("div", { className: "container" }, E.A.isAllowed("revamp2023") ? i.createElement(Oe.a, { mb: "spacing.l" }, i.createElement(C.A, { title: (0, c.AP)("Biographie") })) : i.createElement("div", { className: r }, (0, c.AP)("Biographie")), i.createElement("div", { className: Ua }, i.createElement("h2", { className: s }, a.artist.name), i.createElement("div", { className: Ka, dangerouslySetInnerHTML: { __html: a.artist.bio.full } })));
+        return i.createElement("div", { className: "container" }, E.A.isAllowed("revamp2023") ? i.createElement(Oe.a, { mb: "spacing.l" }, i.createElement(C.A, { title: (0, c.AP)("Biographie") })) : i.createElement("div", { className: r }, (0, c.AP)("Biographie")), i.createElement("div", { className: Ua }, i.createElement("h2", { className: s }, a.artist.name), i.createElement("div", { className: za, dangerouslySetInnerHTML: { __html: a.artist.bio.full } })));
       };
       var Za = a("tCiE"),
         Va = a("kPsn");
@@ -1627,7 +1580,7 @@
                 case Re.G.TOP_TRACK:
                   return i.createElement(w.OJ, { value: { page: "artist_top_tracks" } }, i.createElement("div", { className: "container" }, i.createElement(ge, { id: a, context: this._getContext((0, u.Pe)(d.Ay.Artist, p.sI)) }), i.createElement(J, { id: a, context: this._getContext((0, u.Pe)(d.Ay.Artist, p.sI)), items: [...((l && (null === (t = l.TOP) || void 0 === t ? void 0 : t.data)) || [])], shouldExplicitBeHidden: n })));
                 case Re.G.RELATED_ARTIST:
-                  return i.createElement(Ga, { id: a });
+                  return i.createElement(Ma, { id: a });
                 case Re.G.RELATED_PLAYLIST:
                   return i.createElement(we.A, { type: d.Ay.Artist, title: this._getTabLabel(e), pageContext: mt.CONTEXT_PAGE_ARTIST_TAB_RELATED_PLAYLIST, key: e, id: a, total: l.RELATED_PLAYLIST.total });
                 case Re.G.CONCERTS:
@@ -1689,7 +1642,7 @@
       const ja = (0, o.y)(
         (0, l.Ng)((e) => {
           let { user: t } = e;
-          return { shouldExplicitBeHidden: (0, Me.Uw)(t) === At.g, userIsConnected: (0, Me.UJ)(t) };
+          return { shouldExplicitBeHidden: (0, Ge.Uw)(t) === At.g, userIsConnected: (0, Ge.UJ)(t) };
         })(Ja)
       );
       var Qa;
